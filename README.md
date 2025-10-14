@@ -40,7 +40,7 @@ Para visualizar o projeto localmente, basta clonar este repositório e abrir o a
 
 ### 1. Clone o repositório
 ```bash
-git clone [https://github.com/jaozinnm/PoliReciclo.git](https://github.com/jaozinnm/PoliReciclo.git)
+git clone https://github.com/jaozinnm/PoliReciclo.git
 ```
 ### 2. Navegue até a pasta do projeto
 ```bash
