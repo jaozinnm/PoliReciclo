@@ -298,15 +298,34 @@ table tbody tr:hover {
   align-items: center;
 }
 
+.download-grid ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  display: inline-block; /* A MÁGICA: Trata a lista como um bloco que pode ser centralizado */
+}
+
 .download-buttons {
   margin-right: 1rem;
   padding-top: 20px;
 }
 
-.gif img {
+.gif, .app-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;      
+  margin: 0 auto;  
+}
+
+.app-preview{
+  max-width: 400px;
+}
+
+.gif img, .app-preview img {
   border-radius: 16px;
-  overflow: hidden; /*Corta a parte da imagem que ficar fora*/
-  width: 100%; 
+  max-width: 100%;
+  height: auto;  
   display: block;
 }
 
@@ -465,7 +484,7 @@ table tbody tr:hover {
     min-height: 250px;
   }
 
-  .gif {
+  .gif, .app-preview {
     min-height: auto; /* Deixa a altura ser automática */
     display: flex;
     justify-content: center;
