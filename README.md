@@ -38,15 +38,15 @@ A identidade visual do projeto foi definida no arquivo `assets/css/style.css` ut
 
 Para visualizar o projeto localmente, basta clonar este repositório e abrir o arquivo `index.html` em qualquer navegador web moderno.
 
-# 1. Clone o repositório
+### 1. Clone o repositório
 ```bash
 git clone [https://github.com/jaozinnm/PoliReciclo.git](https://github.com/jaozinnm/PoliReciclo.git)
 ```
-# 2. Navegue até a pasta do projeto
+### 2. Navegue até a pasta do projeto
 ```bash
 cd PoliReciclo
 ```
-# 3. Abra o arquivo `index.html` no seu navegador
+### 3. Abra o arquivo `index.html` no seu navegador
 
 ---
 
