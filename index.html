@@ -4,115 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PoliReciclo</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header class="navbar">
     <div class="container">
-        <h1 class="logo"><a href="index.html"><span class="highlight">Poli</span> Reciclo</a></h1>
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="Logo da PoliReciclo" class="logo-icon">
+          <span class="highlight">Poli</span> Reciclo</a>
+      </h1>
       <nav class="nav-links">
-        <a href="features.html">Funcionalidades</a>
+        <a href="sobre.html">Sobre</a>
         <a href="how-it-works.html">Como Funciona</a>
         <a href="impact.html">Impacto</a>
         <a href="download.html">Baixar App</a>
+        <a href="contato.html">Contato</a>
       </nav>
       <button class="btn btn-primary">Entrar</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h2>Conectando <span class="highlight">pessoas</span> por cidades mais <span class="highlight">limpas</span></h2>
-        <p>O PoliReciclo é um aplicativo colaborativo que une cidadãos, catadores e gestores públicos no combate ao descarte irregular de lixo e na promoção de cidades sustentáveis.</p>
-        <div class="hero-buttons">
-          <a href="#download" class="btn btn-primary">Baixar App</a>
-          <a href="#" class="btn btn-outline">Ver Vídeo</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Conectando <span class="highlight">pessoas</span> por cidades mais <span class="highlight">limpas</span></h2>
+          <p>O PoliReciclo é um aplicativo colaborativo que une cidadãos, catadores e gestores públicos no combate ao descarte irregular de lixo e na promoção de cidades sustentáveis.</p>
+          <div class="hero-buttons">
+            <a href="#download" class="btn btn-primary">Baixar App</a>
+            <a href="#" class="btn btn-outline">Ver Vídeo</a>
+          </div>
+          <div class="hero-stats">
+            <p><strong>25k+</strong> usuários</p>
+            <p><strong>12k+</strong> denúncias</p>
+            <p><strong>50+</strong> cidades</p>
+          </div>
         </div>
-        <div class="hero-stats">
-          <p><strong>25k+</strong> usuários</p>
-          <p><strong>12k+</strong> denúncias</p>
-          <p><strong>50+</strong> cidades</p>
+        <div class="hero-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15801.79896207284!2d-34.88062046321876!3d-8.055522225439699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a2a565885f%3A0x802b0e52579b84b7!2sRecife%2C%20State%20of%20Pernambuco%2C%2050030-230!5e0!3m2!1sen!2sbr!4v1760377586445!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <div class="hero-map">
-        <div class="map-placeholder">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.954020321378!2d-34.900000!3d-8.100000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab197d84e43!2sRecife!5e0!3m2!1spt-BR!2sbr!4v1699999999999"></iframe>
+    </section>
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Como o PoliReciclo transforma sua cidade</h2>
+        <p class="section-subtitle">Uma plataforma completa para gestão de resíduos e limpeza urbana</p>
+        
+        <div class="cards-container">
+          <div class="card">
+            <h3>Denúncia de Pontos Críticos</h3>
+            <p>Reporte focos de descarte irregular com geolocalização precisa e fotos.</p>
+          </div>
+          <div class="card">
+            <h3>Rotas de Coleta Seletiva</h3>
+            <p>Acesse informações sobre dias e horários de coleta em sua região.</p>
+          </div>
+          <div class="card">
+            <h3>Alertas de Alagamento</h3>
+            <p>Visualize em tempo real áreas com risco de inundação devido ao entupimento de bueiros.</p>
+          </div>
+          <div class="card">
+            <h3>Comunidade Ativa</h3>
+            <p>Conecte-se com outros cidadãos, catadores e gestores públicos.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="impact" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Impacto Real nas Cidades</h2>
+        <div class="grid impact-grid"> <div class="impact-item">
+            <h3>68%</h3>
+            <p>Redução de pontos críticos</p>
+          </div>
+          <div class="impact-item">
+            <h3>42%</h3>
+            <p>Aumento na reciclagem</p>
+          </div>
+          <div class="impact-item">
+            <h3>74%</h3>
+            <p>Resposta mais rápida das prefeituras</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download" class="section">
+      <div class="container download-grid">
+        <div>
+          <h2>Baixe agora o aplicativo</h2>
+          <ul>
+            <li>✔ Denuncie pontos de lixo irregular</li>
+            <li>✔ Acompanhe rotas de coleta seletiva</li>
+            <li>✔ Receba alertas de áreas de alagamento</li>
+            <li>✔ Participe de mutirões de limpeza</li>
+          </ul>
+          <div class="download-buttons">
+            <a href="#" class="btn btn-primary">Google Play</a>
+            <a href="#" class="btn btn-primary">App Store</a>
+          </div>
+        </div>
+        <div class="gif">
+          <img src="assets/img/polu.gif" alt="Ilustração de uma tartaruga nadando na água, cercada por lixo plástico como garrafas, sacolas e canudos." style="height: 400px;">
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Features -->
-  <section id="features" class="section">
-    <div class="container">
-      <h2 class="section-title">Como o PoliReciclo transforma sua cidade</h2>
-      <p class="section-subtitle">Uma plataforma completa para gestão de resíduos e limpeza urbana</p>
-      <div class="grid">
-        <div class="card">
-          <h3>Denúncia de Pontos Críticos</h3>
-          <p>Reporte focos de descarte irregular com geolocalização precisa e fotos.</p>
-        </div>
-        <div class="card">
-          <h3>Rotas de Coleta Seletiva</h3>
-          <p>Acesse informações sobre dias e horários de coleta em sua região.</p>
-        </div>
-        <div class="card">
-          <h3>Alertas de Alagamento</h3>
-          <p>Visualize em tempo real áreas com risco de inundação devido ao entupimento de bueiros.</p>
-        </div>
-        <div class="card">
-          <h3>Comunidade Ativa</h3>
-          <p>Conecte-se com outros cidadãos, catadores e gestores públicos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Impacto -->
-  <section id="impact" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Impacto Real nas Cidades</h2>
-      <div class="grid">
-        <div class="impact-item">
-          <h3>68%</h3>
-          <p>Redução de pontos críticos</p>
-        </div>
-        <div class="impact-item">
-          <h3>42%</h3>
-          <p>Aumento na reciclagem</p>
-        </div>
-        <div class="impact-item">
-          <h3>74%</h3>
-          <p>Resposta mais rápida das prefeituras</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Download -->
-  <section id="download" class="section">
-    <div class="container download-grid">
-      <div>
-        <h2>Baixe agora o aplicativo</h2>
-        <ul>
-          <li>✔ Denuncie pontos de lixo irregular</li>
-          <li>✔ Acompanhe rotas de coleta seletiva</li>
-          <li>✔ Receba alertas de áreas de alagamento</li>
-          <li>✔ Participe de mutirões de limpeza</li>
-        </ul>
-        <div class="download-buttons">
-          <a href="#" class="btn btn-primary">Google Play</a>
-          <a href="#" class="btn btn-primary">App Store</a>
-        </div>
-      </div>
-      <div class="app-preview">[Preview do App]</div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
@@ -122,9 +124,9 @@
       <div>
         <h4>PoliReciclo</h4>
         <ul>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Funcionalidades</a></li>
-          <li><a href="#">Baixar</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="sobre.html">Funcionalidades</a></li>
+          <li><a href="download.html">Baixar</a></li>
           <li><a href="#">Preços</a></li>
         </ul>
       </div>
@@ -133,7 +135,7 @@
         <ul>
           <li><a href="#">Centro de Ajuda</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="contato.html">Contato</a></li>
           <li><a href="#">Comunidade</a></li>
         </ul>
       </div>

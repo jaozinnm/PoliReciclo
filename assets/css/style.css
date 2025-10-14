@@ -1,0 +1,480 @@
+
+:root {
+  --cor-primaria: #16a34a;
+  --cor-primaria-hover: #15803d;
+  --cor-destaque-roxo: #551A8B;
+  --cor-texto-principal: #333;
+  --cor-texto-secundario: #666;
+  --cor-texto-terciario: #555;
+  --cor-fundo-claro: #f9fafb;
+  --cor-fundo-destaque: #f0fdf4;
+  --cor-branco: #fff;
+  --cor-borda: #ddd;
+  --cor-placeholder: #e5e7eb;
+
+  --fonte-titulos: 'Poppins', sans-serif;
+  --fonte-corpo: 'Lato', sans-serif;
+}
+
+
+/* 2. RESET BÁSICO E ESTILOS GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+  color: var(--cor-texto-principal);
+  display: flex;             /* 1. Ativa o Flexbox no corpo da página */
+  flex-direction: column;    /* 2. Organiza os filhos (header, main, footer) em uma coluna vertical */
+  min-height: 100vh;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulos);
+}
+
+.logo a{
+  display: flex;         /* Ativa o Flexbox, colocando os itens lado a lado */
+  align-items: center;   /* Alinha a imagem e o texto verticalmente ao centro */
+  gap: 10px;             /* Adiciona um pequeno espaço entre a imagem e o texto */
+  text-decoration: none;
+  color: var(--cor-destaque-roxo);
+}
+
+.logo-icon {
+  height: 32px; /* Define a altura do logo. Ajuste conforme necessário. */
+  width: auto;  /* A largura se ajusta automaticamente para não distorcer. */
+}
+
+.highlight {
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
+
+
+/* 3. COMPONENTES (BOTÕES, ETC)  */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--fonte-titulos);
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+  border: 2px solid var(--cor-primaria);
+}
+
+.btn-primary:hover {
+  background: var(--cor-primaria-hover);
+  border-color: var(--cor-primaria-hover);
+}
+
+.btn-outline {
+  border: 2px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+
+/* 4. SEÇÕES PRINCIPAIS */
+
+.navbar {
+  background: var(--cor-branco);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--cor-primaria);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(to right, var(--cor-fundo-destaque), var(--cor-branco));
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons .btn {
+  margin-right: 1rem;
+}
+
+.hero-stats {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Container principal do mapa */
+.hero-map {
+  border-radius: 16px;
+  min-height: 350px;
+  overflow: hidden; /* Essencial para o iframe respeitar a borda arredondada */
+  display: flex;   /* Flex para controlar o filho (iframe) */
+}
+
+.hero-map iframe {
+  width: 100%;   /* Ocupa toda a largura */
+  flex-grow: 1;  /* FAZ O MAPA CRESCER E OCUPAR TODA A ALTURA DISPONÍVEL */
+  border: none;
+}
+
+/* Estilos Gerais de Seção */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--cor-texto-secundario);
+}
+
+/* 5. LAYOUT DE CARDS COM FLEXBOX */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*Permite que os itens de um container flex quebrem para a linha de baixo quando não há mais espaço horizontal*/
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  flex-basis: 280px; /* Largura base de cada card */
+  flex-grow: 1; /* Permite que cresçam para preencher espaço */
+  max-width: 400px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+/* 6. CONTEÚDO DA PÁGINA SOBRE */
+.intro-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--cor-texto-terciario);
+}
+
+.divider {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.section-title-small {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-extra ul {
+  list-style-position: inside;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.section-extra ul li {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th, table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+table th {
+  background-color: var(--cor-fundo-claro);
+}
+
+table tbody tr:hover {
+  background-color: var(--cor-fundo-destaque);
+}
+
+/* 7. OUTRAS SEÇÕES (IMPACTO, DOWNLOAD)  */
+.bg-light {
+  background: var(--cor-fundo-claro);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.impact-item {
+  text-align: center;
+}
+
+.impact-item h3 {
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.download-buttons {
+  margin-right: 1rem;
+  padding-top: 20px;
+}
+
+.gif img {
+  border-radius: 16px;
+  overflow: hidden; /*Corta a parte da imagem que ficar fora*/
+  width: 100%; 
+  display: block;
+}
+
+/* 10. PÁGINA DE CONTATO */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Divide em duas colunas: 1 parte para o texto, 2 para o mapa */
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.contact-info {
+  padding: 1.5rem;
+}
+
+.contact-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-info address {
+  font-style: normal; /* Remove o itálico padrão da tag <address> */
+  line-height: 1.8;
+}
+
+.contact-info address a{
+  text-decoration: none;
+  color: var(--cor-destaque-roxo);
+
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden; /* Garante que o mapa respeite as bordas arredondadas */
+  aspect-ratio: 16 / 9; /* Mantém a proporção do mapa responsivo */
+  border: 1px solid var(--cor-borda);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 8. FOOTER*/
+.footer {
+  background: var(--cor-fundo-claro);
+  padding: 3rem 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: var(--cor-primaria);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid var(--cor-borda);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+}
+
+
+/* 9. RESPONSIVIDADE */
+
+/* Para Tablets e telas menores (até 992px) */
+@media (max-width: 992px) {
+
+  .hero-grid,
+  .download-grid,
+  .footer-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    padding-bottom: 0.5rem; /* Adiciona um respiro abaixo dos links */
+  }
+
+  .hero-stats {
+    justify-content: center; /* Centraliza os stats quando o layout quebra */
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr; /* Transforma em coluna única em telas menores */
+    text-align: center;
+  }
+}
+
+/* Para Smartphones (até 600px) */
+@media (max-width: 600px) {
+ 
+  body {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 3rem 0; /* Diminui o espaçamento vertical das seções */
+  }
+
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }    
+
+  .hero-buttons, .download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons .btn, .download-buttons .btn {
+    width: 80%; /* Ocupa 80% da largura em vez de 100% para ficar mais elegante */
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-map {
+    min-height: 250px;
+  }
+
+  .gif {
+    min-height: auto; /* Deixa a altura ser automática */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gif img {
+    max-height: 350px;
+    width: auto; /* Deixa a largura se ajustar para manter a proporção */
+
+  }
+}
