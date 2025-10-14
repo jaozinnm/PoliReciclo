@@ -46,7 +46,7 @@ git clone [https://github.com/jaozinnm/PoliReciclo.git](https://github.com/jaozi
 cd PoliReciclo
 
 # 3. Abra o arquivo index.html no seu navegador
-```
+
 ---
 
 🌐 Site no Ar
